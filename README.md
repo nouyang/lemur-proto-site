@@ -109,3 +109,8 @@ To upload a new version of the site via rsync over ssh, type `make deploy`. A we
 [Jekyll]: http://jekyllrb.com/
 [bibble]: https://github.com/sampsyo/bibble/
 [pybtex]: http://pybtex.sourceforge.net
+
+Misc. Notes
+-----------------------
+If you update any variables in the _config.yml file, e.g. the site.name (lab name)
+you must *restart the jekyll server* for the changes to render into _site.

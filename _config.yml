@@ -1,4 +1,5 @@
-name: Awesome Research Group
+name: LEMUR
+fullname: Laboratory for Embedded Machines and Ubiquitous Robots
 url: http://awesome.example.edu
 
 exclude: [bibble, README.md, Makefile, screenshot.png]

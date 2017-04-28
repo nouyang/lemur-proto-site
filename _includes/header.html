@@ -1,0 +1,18 @@
+          <div class="header">
+            <ul class="nav nav-pills pull-right">
+              {% assign shorturl = page.url | replace:'index.html','' %}
+              {% for item in site.navigation %}
+                <li {% if item.link == shorturl %}class="active"{% endif %}>
+                  <a href="{{ site.base }}{{ item.link }}">
+                    {{ item.title }}
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+            <a href="{{ site.base }}/">
+                <h2> LEMUR </h2>
+                <!--<img src="{{ site.base }}/assets/img/logo.png"
+                    srcset="{{ site.base }}/assets/img/logo@2x.png 2x"
+                    alt="Awesome" id="logo">-->
+            </a>
+          </div>

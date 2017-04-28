@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>{{ site.name }}: {{ page.title }}</title>
+        <title>{{ page.title }} | {{ site.name }}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="{{ site.base }}/assets/css/bootstrap.min.css" rel="stylesheet">
         <link href="{{ site.base }}/assets/css/group.css" rel="stylesheet">
@@ -11,41 +11,16 @@
     </head>
     <body>
         <div class="container">
-          <div class="header">
-            <ul class="nav nav-pills pull-right">
-              {% assign shorturl = page.url | replace:'index.html','' %}
-              {% for item in site.navigation %}
-                <li {% if item.link == shorturl %}class="active"{% endif %}>
-                  <a href="{{ site.base }}{{ item.link }}">
-                    {{ item.title }}
-                  </a>
-                </li>
-              {% endfor %}
-            </ul>
-            <a href="{{ site.base }}/">
-                <img src="{{ site.base }}/assets/img/logo.png"
-                    srcset="{{ site.base }}/assets/img/logo@2x.png 2x"
-                    alt="Awesome" id="logo">
-            </a>
-          </div>
+          {% include header.html %}
 
-          {% comment %}Liquid is sort of terrible! I think "!= true" is the
-          only way to do negation?{% endcomment %}
           {% if page.notitle != true %}
           <h2>{{ page.title }}</h2>
           {% endif %}
 
           {{ content }}
 
-          <div class="footer">
-            <p>
-              <a href="http://dept.example.edu/">Illustrious Department</a>
-              at the
-              <a href="http://example.edu/">University of
-                Example</a>
-            </p>
-          </div>
 
+          {% include footer.html %}
         </div> <!-- /container -->
 
         <!-- Support retina images. -->
