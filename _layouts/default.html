@@ -4,8 +4,8 @@
         <meta charset="utf-8">
         <title>{{ site.name }}: {{ page.title }}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="{{ site.base }}/css/bootstrap.min.css" rel="stylesheet">
-        <link href="{{ site.base }}/css/group.css" rel="stylesheet">
+        <link href="{{ site.base }}/assets/css/bootstrap.min.css" rel="stylesheet">
+        <link href="{{ site.base }}/assets/css/group.css" rel="stylesheet">
         <link rel="alternate" type="application/atom+xml" title="Atom"
             href="{{ site.base }}/blog/blog.xml">
     </head>
@@ -23,8 +23,8 @@
               {% endfor %}
             </ul>
             <a href="{{ site.base }}/">
-                <img src="{{ site.base }}/img/logo.png"
-                    srcset="{{ site.base }}/img/logo@2x.png 2x"
+                <img src="{{ site.base }}/assets/img/logo.png"
+                    srcset="{{ site.base }}/assets/img/logo@2x.png 2x"
                     alt="Awesome" id="logo">
             </a>
           </div>
@@ -50,6 +50,6 @@
 
         <!-- Support retina images. -->
         <script type="text/javascript"
-            src="{{ site.base }}/js/srcset-polyfill.js"></script>
+            src="{{ site.base }}/assets/js/srcset-polyfill.js"></script>
     </body>
 </html>
